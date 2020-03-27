@@ -5,7 +5,7 @@ import api from '../../services/api';
 
 import logoImg from '../../assets/logo.svg';
 
-import './styles.css';
+import { StyledIncident } from './styles';
 
 const NewIncident = () => {
     const ongId = localStorage.getItem('ongId');
@@ -39,7 +39,7 @@ const NewIncident = () => {
     };
 
     return (
-        <div className='new-incident-container'>
+        <StyledIncident>
             <div className='content'>
                 <section>
                     <img src={logoImg} alt='Be The Hero' />
@@ -76,7 +76,7 @@ const NewIncident = () => {
                     </button>
                 </form>
             </div>
-        </div>
+        </StyledIncident>
     );
 };
 

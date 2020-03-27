@@ -3,7 +3,7 @@ import { Link, useHistory } from 'react-router-dom';
 import { FiLogIn } from 'react-icons/fi';
 import api from '../../services/api';
 
-import './styles.css';
+import { StyledLogon } from './styles';
 
 import logoImg from '../../assets/logo.svg';
 import heroesImg from '../../assets/heroes.png';
@@ -29,8 +29,8 @@ const Logon = () => {
     };
 
     return (
-        <div className='logon-container'>
-            <section className='form'>
+        <StyledLogon>
+            <section>
                 <img src={logoImg} alt='Be The Hero' />
                 <form onSubmit={loginHandler}>
                     <h1>Faça seu logon</h1>
@@ -50,7 +50,7 @@ const Logon = () => {
                 </form>
             </section>
             <img src={heroesImg} alt='Heroes' />
-        </div>
+        </StyledLogon>
     );
 };
 

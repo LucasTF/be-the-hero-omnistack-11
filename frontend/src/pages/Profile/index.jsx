@@ -5,7 +5,7 @@ import api from '../../services/api';
 
 import logoImg from '../../assets/logo.svg';
 
-import './styles.css';
+import { StyledProfile } from './styles';
 
 const Profile = () => {
     const [incidents, setIncidents] = useState([]);
@@ -46,7 +46,7 @@ const Profile = () => {
     };
 
     return (
-        <div className='profile-container'>
+        <StyledProfile>
             <header>
                 <img src={logoImg} alt='Be the Hero' />
                 <span>Bem vinda, {ongName}</span>
@@ -80,7 +80,7 @@ const Profile = () => {
                     </li>
                 ))}
             </ul>
-        </div>
+        </StyledProfile>
     );
 };
 

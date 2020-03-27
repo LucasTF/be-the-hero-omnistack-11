@@ -5,7 +5,7 @@ import api from '../../services/api';
 
 import logoImg from '../../assets/logo.svg';
 
-import './styles.css';
+import { StyledRegister } from './styles';
 
 const Register = () => {
     const [name, setName] = useState('');
@@ -39,7 +39,7 @@ const Register = () => {
     };
 
     return (
-        <div className='register-container'>
+        <StyledRegister>
             <div className='content'>
                 <section>
                     <img src={logoImg} alt='Be The Hero' />
@@ -92,7 +92,7 @@ const Register = () => {
                     </button>
                 </form>
             </div>
-        </div>
+        </StyledRegister>
     );
 };
 
